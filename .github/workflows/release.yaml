@@ -13,4 +13,5 @@ jobs:
         uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          chart_version: 0.1.0-r1
+          charts_dir: .
+          target_dir: ./archives
