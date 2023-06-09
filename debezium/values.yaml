@@ -30,6 +30,9 @@ connect:
       cpu: 500m
       memory: 1Gi
 
+  volumes: {}
+  volumeMounts: {}
+
   env:
     - name: BOOTSTRAP_SERVERS
       value: KAFKA_BOOTSTRAP_SERVER_ADDRESS:9092

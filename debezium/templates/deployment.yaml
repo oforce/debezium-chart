@@ -39,6 +39,10 @@ spec:
           env:
             {{- toYaml . | nindent 12}}
           {{- end}}
+          {{- with .Values.connect.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12}}
+          {{- end}}
       {{- with .Values.connect.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -49,6 +53,10 @@ spec:
       {{- end }}
       {{- with .Values.connect.tolerations }}
       tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.connect.volumes }}
+      volumes:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 ---
