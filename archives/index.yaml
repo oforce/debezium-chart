@@ -3,9 +3,9 @@ entries:
   debezium:
   - apiVersion: v2
     appVersion: v2.2
-    created: "2023-06-09T17:35:08.69038423Z"
+    created: "2023-06-20T14:26:36.985622063Z"
     description: Debezium & Debezium UI Chart
-    digest: b0f65c40538f40329d06e9fa02c3761e78ffd02f6f8c1b9261839270bf6e9046
+    digest: 289ce6140915a14ff6322d1c576c3013c17ce1b0f1fc260724145e397974a750
     icon: https://debezium.io/assets/images/color_white_debezium_type_600px.svg
     name: debezium
     type: application
@@ -45,4 +45,4 @@ entries:
     urls:
     - https://oforce.github.io/debezium-chart/archives/debezium-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-09T17:35:08.688891113Z"
+generated: "2023-06-20T14:26:36.978858524Z"
