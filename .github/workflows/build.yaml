@@ -2,14 +2,15 @@ name: Prod Deploy
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches:
       - build-multiarch
 
 jobs:
   build:
-    name: Deploy to ECS
-    runs-on: [ "self-hosted", "linux", "x64", "production" ]
+    name: Build image
+    runs-on: [ "self-hosted", "linux", "x64", "uat" ]
     steps:
       - uses: actions/checkout@v2
 
@@ -29,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            506035520971.dkr.ecr.us-east-1.amazonaws.com/datadog-redpanda:latest
+            ${{ steps.login-ecr.outputs.registry }}:latest
           tags: |
             type=schedule
             type=ref,event=branch
