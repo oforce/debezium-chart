@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build image
-    runs-on: [ "self-hosted", "linux", "x64", "uat" ]
+    runs-on: uat
     steps:
       - uses: actions/checkout@v2
 
